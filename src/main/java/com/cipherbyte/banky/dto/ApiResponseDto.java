@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Data
 public class ApiResponseDto {
-
+	
+	private String status;
 	private String message;
-	private String error;
-	private int errorCode;
+	private int statusCode;
 }

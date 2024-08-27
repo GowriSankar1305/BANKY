@@ -33,12 +33,6 @@ public class Address {
 	private Long addressId;
 	@Enumerated(EnumType.STRING)
 	private AddressTypeEnum addressType;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(nullable = true,name = "customer_id")
-	private Customer customer;
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(nullable = true,name = "nominee_id")
-	private Nominee nominee;
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "state_id")
 	private State state;

@@ -26,3 +26,7 @@
 2024-08-17T16:09:25.468+05:30  INFO 2480 --- [Banky] [http-nio-9797-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-08-17T16:09:25.469+05:30  INFO 2480 --- [Banky] [http-nio-9797-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2024-08-17T16:09:25.470+05:30  INFO 2480 --- [Banky] [http-nio-9797-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-17T23:58:17.637+05:30  INFO 2480 --- [Banky] [RMI TCP Connection(474)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2024-08-17T23:58:18.029+05:30  INFO 2480 --- [Banky] [RMI TCP Connection(474)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-17T23:58:18.071+05:30  INFO 2480 --- [Banky] [RMI TCP Connection(474)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-17T23:58:18.084+05:30  INFO 2480 --- [Banky] [RMI TCP Connection(474)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

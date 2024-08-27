@@ -21,6 +21,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.SequenceGenerator;
@@ -59,7 +60,11 @@ public class Customer {
 	private GenderEnum gender;
 	@Enumerated(EnumType.STRING)
 	private CustomerTitleEnum customerTitle;
-	@OneToMany(fetch = FetchType.LAZY,mappedBy = "customer")
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinTable(name = "tbl_customer_addresses",
+	        joinColumns = @JoinColumn(name = "customer_id"),
+	        inverseJoinColumns = @JoinColumn(name = "address_id"),
+	        schema = AppConstants.DB_SCHEMA)
 	private List<Address> addresses;
 	@Enumerated(EnumType.STRING)
 	private MarritalStatusEnum marritalStatus;
@@ -73,5 +78,7 @@ public class Customer {
 	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "nominee_id")
 	private Nominee nominee;
+	private Boolean isCustomerVerified;
 	private LocalDateTime createdTime;
+	private LocalDateTime modifiedTime;
 }

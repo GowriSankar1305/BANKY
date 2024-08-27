@@ -7,4 +7,5 @@ public interface CustomerService {
 
 	public ApiResponseDto saveCustomer(CustomerDto customerdto);
 	public CustomerDto findCustomer(Long customerId);
+	public ApiResponseDto updateVerificationStatus(Long customerId);
 }
